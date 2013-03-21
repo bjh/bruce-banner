@@ -2,9 +2,16 @@ bruce-banner
 # BruceBanner
 
 I am a lazy b****
-I debug old school quite a lot and usually end up typing this pattern over and over:
-`puts '*' * 40`
+I debug old school quite a lot and usually end up typing this pattern over and over:  
+`puts '*' * 40`  
 `puts "thing: #{thing}"`
+
+## Usage
+
+basic usage: 
+```bb thing```
+advanced `bb(thing, sentinal:'-', count:20)`
+
 
 ## Installation
 
@@ -20,10 +27,6 @@ Or install it yourself as:
 
     $ gem install bruce-banner
 
-## Usage
-
-basic usage `bb(thing)`
-advanced `bb(thing, sentinal:'-', count:20)`
 
 ## Contributing
 

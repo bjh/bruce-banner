@@ -3,6 +3,7 @@ bruce-banner
 
 I am a lazy b****
 I debug old school quite a lot and usually end up typing this pattern over and over:  
+Also some other gems were a bit overkill...but still very nice ;)
 ```ruby
 puts '*' * 40
 puts "thing: #{thing}"

@@ -81,6 +81,7 @@ end
 You can also override the defaults on a per call basis:
 
 ```ruby
+# NOTE: :count is not being picked up yet...
 bb({one:1, two:2}, after:true, string:'*')
 
 # outputs

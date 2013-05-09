@@ -81,7 +81,6 @@ end
 You can also override the defaults on a per call basis:
 
 ```ruby
-# NOTE: :count is not being picked up yet...
 bb({one:1, two:2}, after:true, string:'*')
 
 # outputs
@@ -120,6 +119,5 @@ BruceBanner.template = "%s: %s"
 bb("thing", 1432) #=> thing: 1432
 ```
 
-Right now passing in the `:count` config option to the `bb` method is not being picked up. FIXME!
 
 

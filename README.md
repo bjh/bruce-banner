@@ -25,7 +25,7 @@ in irb:
 require 'bruce-banner'
 
 # NOTE: if sticking a Hash directly in the call you may need the parens
-bb({one:1, two:2}) 
+bb({one:1, two:2}) # or h = {one:1, two:2}; bb h 
 
 # output with the default settings
 ------------------
@@ -33,7 +33,7 @@ bb({one:1, two:2})
 ```
 
 Even better magic shamelessy stolen from Jim Weirich.  
-You pass a block with the name of a variable and it will print the name and the value.
+You pass a *block* wrapping the name of a variable *(as a symbol)* and it will print the name and the value.
 
 ```ruby
 magic = "this is voodoo magic!"
@@ -44,9 +44,20 @@ bb {:magic}
 magic: this is voodoo magic!
 
 # NOTE: passing the block overrides any passed in value but will pick up defaults
-bb(magic, after:true) {:magic}
+that_whiny_girl_from_highschool = "no one pays any attention to me!"
+bb(that_whiny_girl_from_highschool, after:true) {:magic}
 
 # outputs
+----------------------------
+magic: this is voodoo magic!
+----------------------------
+
+# Really you can just invoke the method like this:
+# forgetting all about that girl from high school
+
+bb(after:true) {:magic}
+
+# and it sill outputs
 ----------------------------
 magic: this is voodoo magic!
 ----------------------------

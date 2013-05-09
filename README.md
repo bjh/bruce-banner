@@ -92,7 +92,7 @@ bb({one:1, two:2}, after:true, string:'*')
 ## And just for fun!
 
 ```ruby
-BruceBanner.make_him_angry!
+BruceBanner.make_him_angry! #=> find out for yourself ;)
 ```
 
 ## Installation

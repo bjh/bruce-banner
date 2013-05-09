@@ -8,7 +8,7 @@ puts '*' * 40
 puts "thing: #{thing}"
 ```
 
-Since my laziness knows no bounds I created this so I can do this instead:
+Since my laziness knows no bounds I wrote this gem so I can type stuff like this instead:
 
 ```ruby
 bb thing

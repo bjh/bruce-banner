@@ -22,9 +22,9 @@ module BruceBanner
     output << " |  : |       |  ---:---  |      | :  | "
     output << "  \\ : |       |_____:_____|      | : /  "
     output << "  /   (       |----|------|      )   \\  "
-    output << " /... .|      /`   |     '\\    |. ...\\  "
-    output << "|::::/''     /    .L__.    \\   ''\\::::| "
-    output << " \"\"\"\"       /      / \\      \\     \"\"\"\"  "
+    output << " /... .|      /`   |     '\\     |. ...\\  "
+    output << "|::::/''     /    .L__.    \\    ''\\::::| "
+    output << " \"\"\"\"       /      / \\       \\     \"\"\"\"  "
     output << "           :      /   \\      :          "
     output << "           |     /     \\     |          "
     output << "           \\    /       \\    /          "
@@ -63,7 +63,6 @@ module BruceBanner
       end
 
       puts(options[:string] * options[:count]) if options[:before]
-      puts "#{what}"
       puts(options[:string] * options[:count]) if options[:after]
     end
 

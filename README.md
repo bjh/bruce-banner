@@ -119,4 +119,6 @@ BruceBanner.template = "%s: %s"
 bb("thing", 1432) #=> thing: 1432
 ```
 
+Right now passing in the `:count` config option to the `bb` method is not being picked up. FIXME!
+
 

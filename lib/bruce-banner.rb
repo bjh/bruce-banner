@@ -59,7 +59,7 @@ module BruceBanner
       end
 
       if options[:size_to_fit]
-        options[:count] = what.to_s.size
+        options[:count] = [what.to_s.size, BruceBanner.defaults[:maximum]].min
       end
 
       puts(options[:string] * options[:count]) if options[:before]
@@ -88,6 +88,7 @@ module BruceBanner
     string:'-',
     before:true,
     after:false,
-    size_to_fit:true
+    size_to_fit:true,
+    maximum: 80
   }
 end

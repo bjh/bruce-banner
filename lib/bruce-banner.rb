@@ -63,6 +63,7 @@ module BruceBanner
       end
 
       puts(options[:string] * options[:count]) if options[:before]
+      puts "#{what}"
       puts(options[:string] * options[:count]) if options[:after]
     end
 

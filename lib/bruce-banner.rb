@@ -41,11 +41,6 @@ module BruceBanner
     puts output.join "\n"
   end
 
-  module Configuration
-    attr_accessor :defaults
-  end
-
-
   # this is where the magic happens...
   module ::Kernel
     # block magic shamelessly stolen from Jim Weirich (with a small tweak)
@@ -62,24 +57,25 @@ module BruceBanner
         options[:count] = [what.to_s.size, BruceBanner.defaults[:maximum]].min
       end
 
-      puts(options[:string] * options[:count]) if options[:before]
-      puts "#{what}"
-      puts(options[:string] * options[:count]) if options[:after]
+      output = []
+      output << (options[:string] * options[:count]) if options[:before]
+      output << "#{what}"
+      output << (options[:string] * options[:count]) if options[:after]
+      
+      puts output.join("\n")
     end
-
-
-    # def debug(&block)
-    #   name = block.call.to_s
-    #   bb "#{name} = #{eval(name, block.binding)}"
-    # end
   end
+
+  module Configuration
+    attr_accessor :defaults
+  end
+
+  extend Configuration
 
   # configure-ater-iter-voodoo
   def self.configuration
     yield(self.defaults) if block_given?
   end
-
-  extend Configuration
 
   # Hulk SMASH!
   attr_accessor :defaults
